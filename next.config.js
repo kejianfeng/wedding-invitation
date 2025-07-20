@@ -2,6 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
+    unoptimized: true, // 禁用图片优化，直接使用原始图片
     remotePatterns: [
       {
         protocol: 'https',
