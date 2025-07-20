@@ -5,21 +5,15 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'ai-public.mastergo.com',
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
         hostname: 'www.hunlihu.com',
         port: '',
-        pathname: '/**',
+        pathname: '/userphoto/**',
       },
       {
         protocol: 'https',
         hostname: 'h.hunlihu.com',
         port: '',
-        pathname: '/**',
+        pathname: '/sysma/**',
       },
     ],
     formats: ['image/avif', 'image/webp'],

@@ -1,5 +1,4 @@
 import React from 'react'
-import WechatShare from './WechatShare'
 
 export default function BottomActions() {
   const handleAction = (action: string) => {
@@ -43,7 +42,7 @@ export default function BottomActions() {
         </div>
         
         {/* 操作按钮 */}
-        <div className="grid grid-cols-2 gap-4 mb-6">
+        <div className="grid grid-cols-3 gap-4">
           <button
             onClick={() => handleAction('call')}
             className="bg-primary text-white py-4 px-6 rounded-lg flex items-center justify-center space-x-2 hover:bg-primary/90 transition-colors"
@@ -63,9 +62,7 @@ export default function BottomActions() {
             </svg>
             <span>发送短信</span>
           </button>
-        </div>
-        
-        <div className="grid grid-cols-2 gap-4">
+          
           <button
             onClick={() => handleAction('map')}
             className="bg-accent text-white py-4 px-6 rounded-lg flex items-center justify-center space-x-2 hover:bg-accent/90 transition-colors"
@@ -75,8 +72,6 @@ export default function BottomActions() {
             </svg>
             <span>导航前往</span>
           </button>
-          
-          <WechatShare className="py-4 px-6" />
         </div>
         
         {/* 底部装饰 */}
