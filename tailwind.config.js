@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#8B9DC3',     // 清新蓝紫色
+        primary: '#BA9B8A',     // 清新蓝紫色
         secondary: '#F0F4F8',   // 极淡蓝灰
         accent: '#D4E4F7',      // 淡蓝色
         soft: '#E8F2FF',        // 浅蓝白
@@ -16,7 +16,8 @@ module.exports = {
         text: {
           primary: '#2D3748',   // 深灰蓝
           secondary: '#4A5568', // 中灰蓝
-          light: '#718096'      // 浅灰蓝
+          light: '#718096',      // 浅灰蓝
+          wedding: '#BA9B8A'      // 黄褐色
         }
       },
       fontFamily: {

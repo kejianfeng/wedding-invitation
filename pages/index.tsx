@@ -42,14 +42,11 @@ export default function Home() {
         {/* 照片画廊 */}
         <PhotoGallery onImageClick={handleImageClick} />
         
+            {/* 新人签名和邀请文字 */}
+            <SignatureSection />
         {/* 婚礼详情和倒计时 */}
         <WeddingDetails />
         
-        {/* 地图和交通信息 */}
-        <MapSection />
-        
-        {/* 新人签名和邀请文字 */}
-        <SignatureSection />
         
         {/* 底部操作按钮 */}
         <BottomActions />

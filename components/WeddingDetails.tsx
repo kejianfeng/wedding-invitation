@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import MapSection from './MapSection'
 
 export default function WeddingDetails() {
   const [timeLeft, setTimeLeft] = useState({
@@ -29,14 +30,43 @@ export default function WeddingDetails() {
   }, [])
 
   return (
-    <section className="py-12 bg-background">
-      <div className="text-center mb-12">
-        <h2 className="text-2xl font-wedding text-black mb-4">婚礼倒计时</h2>
+    <section className="py-4 bg-background">
+          {/* 婚礼信息 */}
+          <div className="px-6 text-center">
+        <div className="mb-8">
+          <div className="space-y-4">
+            <div className="p-6 shadow-sm">
+              {/* { 日期  } */}
+              <div className="text-sm text-gray-600 mb-4"> /  婚礼日期  / </div>
+              <div className="text-sm text-black">2025年10月02日 </div>
+              <div className="text-sm text-gray-600 mt-1">农历八月十一（星期四）</div>
+              <div className="text-sm text-gray-600 mt-1">中午11:30 恭候入席</div>
+            </div>
+                        
+            <div className="pt-6">
+              <div className="text-sm text-gray-600 mb-2"> / 婚礼地点 / </div>
+              <div className="text-sm text-black">茂名市化州官桥镇</div>
+              <div className="text-sm text-gray-600 mt-1">读田村文化广场</div>
+            </div>
+              <MapSection />
+          </div>
+        </div>
+        
+        {/* 装饰性文字 */}
+        <div className="mt-8">
+          <p className="text-sm text-black leading-relaxed">
+            "最大的幸福就是能把自己的手放在你的手心<br/>
+            与你一起走完这浪漫的一生"
+          </p>
+        </div>
+      </div>
+      <div className="text-center mt-12">
+        <h2 className="text-lg font-wedding text-black mb-4">婚礼倒计时</h2>
         <p className="text-sm text-gray-600">Countdown to Our Special Day</p>
       </div>
       
       {/* 倒计时组件 */}
-      <div className="flex justify-center mb-12">
+      <div className="flex justify-center mt-10">
         <div className="flex space-x-4">
           <div className="text-center">
             <div className="w-16 h-16 bg-black text-white rounded-lg flex flex-col items-center justify-center">
@@ -65,39 +95,6 @@ export default function WeddingDetails() {
         </div>
       </div>
       
-      {/* 婚礼信息 */}
-      <div className="px-6 text-center">
-        <div className="mb-8">
-          <h3 className="text-xl font-wedding text-black mb-4">婚礼详情</h3>
-          <div className="space-y-4">
-            <div className="bg-white rounded-lg p-6 shadow-sm">
-              <div className="text-sm text-gray-600 mb-2">日期</div>
-              <div className="text-lg font-wedding text-black">2025年10月02日</div>
-              <div className="text-xs text-gray-600 mt-1">农历：八月十一（星期四）</div>
-            </div>
-            
-            <div className="bg-white rounded-lg p-6 shadow-sm">
-              <div className="text-sm text-gray-600 mb-2">时间</div>
-              <div className="text-lg font-wedding text-black">11:58</div>
-              <div className="text-xs text-gray-600 mt-1">良辰吉时</div>
-            </div>
-            
-            <div className="bg-white rounded-lg p-6 shadow-sm">
-              <div className="text-sm text-gray-600 mb-2">地点</div>
-              <div className="text-lg font-wedding text-black">幸福大酒店</div>
-              <div className="text-xs text-gray-600 mt-1">北京市朝阳区幸福路123号</div>
-            </div>
-          </div>
-        </div>
-        
-        {/* 装饰性文字 */}
-        <div className="mt-8">
-          <p className="text-sm text-black leading-relaxed">
-            "最大的幸福就是能把自己的手放在你的手心<br/>
-            与你一起走完这浪漫的一生"
-          </p>
-        </div>
-      </div>
     </section>
   )
 } 

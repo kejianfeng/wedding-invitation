@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
+import Image from 'next/image'
 
 export default function InvitationCard() {
   const router = useRouter()
@@ -17,14 +18,18 @@ export default function InvitationCard() {
  
   return (
     <div className="relative bg-gradient-to-b from-white via-background to-background rounded-t-3xl z-10 overflow-hidden">
-      {/* 装饰性背景元素 */}
-      <div className="absolute top-0 left-0 w-full h-full opacity-5">
-        <div className="absolute top-10 left-10 w-20 h-20 border border-primary/20 rounded-full"></div>
-        <div className="absolute top-20 right-16 w-12 h-12 border border-primary/20 rounded-full"></div>
-        <div className="absolute bottom-20 left-16 w-16 h-16 border border-primary/20 rounded-full"></div>
-        <div className="absolute bottom-10 right-10 w-24 h-24 border border-primary/20 rounded-full"></div>
+       <div className="flex justify-center pointer-events-none">
+        <Image
+          src="https://h.hunlihu.com/sysma/1_5ee41461a91d900440cc6a184.png"
+          // src="https://img.alicdn.com/imgextra/i4/2210508254720/O1CN01LYOUTS1kjoDniZcvd_!!2210508254720.jpg"
+          alt="底部装饰"
+          width={100}
+          height={60}
+          className="w-8/12 object-cover"
+        />
       </div>
-      
+
+      <p className="mt-4 text-sm font-wedding  text-center tracking-widest text-text-wedding"> 我们的「婚礼邀请」</p>      
       <div className="relative px-8 py-16">
         {/* 顶部装饰线 */}
         <div className="flex justify-center mb-8">
@@ -42,33 +47,32 @@ export default function InvitationCard() {
               <p className="font-wedding text-2xl text-black mb-2 relative z-10">
                 {invitationName}
               </p>
-              {/* 下划线装饰 */}
-              <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-24 h-0.5 bg-gradient-to-r from-primary/40 via-primary to-primary/40"></div>
+            </div>
+            {/* https://img.alicdn.com/imgextra/i4/2210508254720/O1CN01eQcTqH1kjoDclSC3t_!!2210508254720.png */}
+            <div className="flex justify-center"> 
+            <Image
+              src="https://img.alicdn.com/imgextra/i4/2210508254720/O1CN01eQcTqH1kjoDclSC3t_!!2210508254720.png"
+              alt="love"
+              width={100}
+              height={100}
+              className="object-cover"
+            />
             </div>
           </div>
           
-          {/* 装饰性图标 */}
-          <div className="flex justify-center">
-            <div className="relative">
-              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary/10 to-secondary/20 flex items-center justify-center border border-primary/20">
-                <svg className="w-10 h-10 text-primary" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-                </svg>
-              </div>
-              {/* 装饰性圆点 */}
-              <div className="absolute -top-2 -right-2 w-4 h-4 bg-primary/30 rounded-full"></div>
-              <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-secondary/40 rounded-full"></div>
-            </div>
-          </div>
-          
+          {/* 嗨当您看到这篇文章的时候我们的婚礼已经进入倒计时啦~在这不平凡的一年我们决定携手踏进人生的新阶段成为彼此生命中最重要的人 */}
           {/* 邀请文字 */}
           <div className="space-y-6 max-w-md mx-auto">
             <div className="space-y-3">
               <p className="text-sm text-black leading-relaxed font-light">
-                诚挚邀请您参加我们的婚礼
+                嗨 👋 ～～～ 诚挚邀请您参加我们的婚礼
               </p>
-              <p className="text-sm text-gray-600 leading-relaxed font-light">
-                见证这份美好的时刻
+              <p className="text-xs text-gray-600 leading-relaxed font-light">
+                一起见证与感受
+              </p>
+
+              <p className="text-xs text-gray-600 leading-relaxed font-light">
+                小烽烽与小菲霞这独一无二的时刻
               </p>
             </div>
             
@@ -80,7 +84,7 @@ export default function InvitationCard() {
             </div>
             
             <p className="text-xs text-gray-500 italic font-light">
-              "愿我们的爱情故事，成为您心中最美的回忆"
+              "期待你的到来，赋予那天特别的意义"
             </p>
           </div>
         </div>

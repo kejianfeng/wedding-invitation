@@ -1,9 +1,31 @@
-import React from 'react'
+import React, { useState, useRef } from 'react'
 import Image from 'next/image'
 
 export default function HeroSection() {
+  const [isPlaying, setIsPlaying] = useState(false)
+  const audioRef = useRef<HTMLAudioElement>(null)
+
+  const toggleMusic = () => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause()
+      } else {
+        audioRef.current.play()
+      }
+      setIsPlaying(!isPlaying)
+    }
+  }
+
   return (
     <div className="relative overflow-hidden">
+      {/* 音频元素 */}
+      <audio
+        ref={audioRef}
+        src="https://www.hunlihu.com/sysmusic/131a43efbfa84433bd7e7fe9ac1da932.mp3"
+        loop
+        onEnded={() => setIsPlaying(false)}
+      />
+      
       <Image
         src="https://www.hunlihu.com/userphoto/194774_293b84739997b14ad0d4de69b.jpg"
         alt="婚礼背景"
@@ -13,8 +35,24 @@ export default function HeroSection() {
         priority
       />
       
+      {/* 音乐播放按钮 - 右上角 */}
+      <div className="absolute top-4 right-4 z-20">
+        <button
+          onClick={toggleMusic}
+          className="w-12 h-12 flex items-center justify-center transition-all duration-300"
+        >
+          <Image
+            src="https://h.hunlihu.com/static/inv/png/play_2-c19e7a5a.png"
+            alt="音乐播放"
+            width={24}
+            height={24}
+            className={`w-6 h-6 transition-transform duration-300 ${isPlaying ? 'animate-pulse' : ''}`}
+          />
+        </button>
+      </div>
+      
       {/* 顶部装饰元素 */}
-      <div className="absolute top-[1.425rem] left-[1.4rem] w-[7.3125rem] h-[3.4775rem] z-[7] pointer-events-none opacity-100">
+      <div className="absolute left-0 top-0 m-12 pointer-events-none">
         <Image
           src="https://h.hunlihu.com/sysma/1_b81e042e5b98fc40fc65013b3.png"
           alt="装饰元素"
@@ -29,42 +67,36 @@ export default function HeroSection() {
       
       {/* 内容层 */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-white z-10">
-        <div className="text-center">
-          {/* 中央装饰元素 - 替代"We Got Married"文字 */}
-          <div className="mb-8 flex justify-center">
-            <div className="w-[8rem] h-[4rem]">
-              <Image
-                src="https://h.hunlihu.com/sysma/1_b81e042e5b98fc40fc65013b3.png"
-                alt="婚礼装饰"
-                width={128}
-                height={64}
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-          
+        <div className="text-center">          
           <div className="mb-8">
             <p className="text-sm mb-2 opacity-90 font-light">好久不见·婚礼见</p>
-            <p className="text-xl font-light">2025.10.02</p>
-          </div>
-          
-          {/* 装饰性分割线 */}
-          <div className="w-16 h-px bg-white opacity-60 mb-8 mx-auto"></div>
-          
-          {/* 新郎新娘名字区域 - 参考设计图 */}
-          <div className="flex items-center justify-center space-x-2">
-            <div className="text-center">
-              <p className="text-base font-wedding mb-2 text-black font-light tracking-wide">柯剑烽</p>
-              <p className="text-xs font-english opacity-80 tracking-wider text-black uppercase">GROOM</p>
-            </div>
-            <div className="text-3xl text-black font-light opacity-60">/</div>
-            <div className="text-center">
-              <p className="text-base font-wedding mb-2 text-black font-light tracking-wide">黄菲霞</p>
-              <p className="text-xs font-english opacity-80 tracking-wider text-black uppercase">BRIDE</p>
-            </div>
+            <p className="text-lg font-light">2025.10.02</p>
           </div>
         </div>
       </div>
+
+       {/* 新郎新娘名字区域 - 参考设计图 */}
+       <div className="absolute bottom-20 left-0 right-0 flex items-center justify-center space-x-2 ">
+            <div className="text-center">
+              <p className="text-base font-wedding text-black font-light tracking-wide">柯剑烽</p>
+            </div>
+            <div className="text-xl text-black font-light opacity-60">/</div>
+            <div className="text-center">
+              <p className="text-base font-wedding  text-black font-light tracking-wide">黄菲霞</p>
+            </div>
+          <div>
+          <div className="absolute -bottom-6 left-0 right-0 flex items-center justify-center space-x-2">
+            <div className="text-center">
+              <p className="text-xs font-english opacity-80 tracking-wider text-black uppercase">GROOM</p>
+            </div>
+            <div className="text-xl text-black font-light opacity-60 invisible">/</div>
+            <div className="text-center">
+              <p className="text-xs font-english opacity-80 tracking-wider text-black uppercase">BRIDE</p>
+            </div>
+          </div>
+
+          </div>
+          </div>
       
       {/* 底部mask过渡 */}
       <div className="hero-mask-transition"></div>

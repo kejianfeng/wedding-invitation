@@ -157,18 +157,6 @@ body {
     rgba(253, 254, 255, 0.1) 85%,
     transparent 100%
   );
-  -webkit-mask-image: radial-gradient(
-    ellipse at center bottom,
-    black 0%,
-    black 40%,
-    transparent 100%
-  );
-  mask-image: radial-gradient(
-    ellipse at center bottom,
-    black 0%,
-    black 40%,
-    transparent 100%
-  );
 }
 
 /* 新增样式 */
