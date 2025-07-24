@@ -8,7 +8,7 @@ export default function SignatureSection() {
         {/* 顶部标题 */}
         <div className="text-center mb-8">
           <h2 className="text-2xl font-wedding text-black mb-6">婚礼邀请</h2>
-          
+
           {/* 装饰元素 - love */}
           <div className="flex items-center justify-center mb-6">
             <div className="w-16 h-px bg-gray-300"></div>
@@ -24,9 +24,9 @@ export default function SignatureSection() {
             <div className="w-16 h-px bg-gray-300"></div>
           </div>
           {/* 英文标题 */}
-          <p className="text-sm font-wedding text-black uppercase tracking-wide">WELCOME TO OUR WEDDING</p>
+          <p className="text-sm font-english text-black uppercase tracking-wide">WELCOME TO OUR WEDDING</p>
         </div>
-        
+
         {/* 新人照片区域 */}
         <div className="flex justify-center items-center space-x-8 mb-8">
           {/* 新郎照片 */}
@@ -40,7 +40,7 @@ export default function SignatureSection() {
               />
             </div>
           </div>
-          
+
           {/* 新娘照片 */}
           <div className="text-center">
             <div className="relative w-32 h-32 mb-4">

@@ -6,215 +6,165 @@ interface PhotoGalleryProps {
 }
 
 export default function PhotoGallery({ onImageClick }: PhotoGalleryProps) {
-  const content = [
-    {
-      text: "我们的相遇，是命运最美的安排。在茫茫人海中，我们找到了彼此，从此生命有了新的意义。",
-      leftImage: {
-        src: "https://www.hunlihu.com/userphoto/194774_7676849d098edcdbd42b12815.jpg",
-        alt: "相遇时刻"
-      },
-      rightText: {
-        title: "Love is long",
-        subtitle: "我爱你\n从前到以后\n周周复年年"
-      }
-    },
-    {
-      text: "每一次的约会，都是我们爱情故事中最珍贵的篇章。那些平凡的日子里，因为有你的陪伴而变得格外美好。",
-      leftText: {
-        title: "/",
-        subtitle: "世界都不大\n我可以哪里都不去\n我可以在这里\n只看着你\n直到世界老去"
-      },
-      rightImage: {
-        src: "https://www.hunlihu.com/userphoto/194774_c36784a8ca35639a657d1ce81.jpg",
-        alt: "约会时光"
-      }
-    },
-    {
-      text: "我们一起走过春夏秋冬，见证了彼此的成长。每一个季节都有属于我们的回忆，每一个瞬间都值得珍藏。",
-      leftImage: {
-        src: "https://www.hunlihu.com/userphoto/194774_ca91e400793d3a329facf2bb0.jpg",
-        alt: "四季回忆"
-      },
-      rightText: {
-        title: "LOVE STORY",
-        subtitle: "I have crossed oceans of time\nto find you."
-      }
-    },
-    {
-      text: "求婚的那一天，是我人生中最紧张也最幸福的时刻。当你点头的那一刻，我知道我们的未来将更加美好。",
-      leftText: {
-        title: "遇见你是命运的安排",
-        subtitle: "而爱上你是我情不自禁\n(喜+喜)"
-      },
-      rightImage: {
-        src: "https://www.hunlihu.com/userphoto/194774_d5f5e4108a8185f3bfcef009c.jpg",
-        alt: "求婚时刻"
-      }
-    },
-    {
-      text: "婚纱照的拍摄，让我们重新体验了恋爱的甜蜜。镜头前的每一个笑容，都是我们爱情最真实的写照。",
-      leftImage: {
-        src: "https://www.hunlihu.com/userphoto/194774_e72274864b7adb6a6515d77cc.jpg",
-        alt: "婚纱照"
-      },
-      rightText: {
-        title: "He loves me so much",
-        subtitle: "是明目张胆 是深情款款"
-      }
-    },
-    {
-      text: "筹备婚礼的过程中，我们更加深刻地理解了什么是责任与承诺。每一个细节都承载着我们对未来的期待。",
-      leftText: {
-        title: "有幸相遇",
-        subtitle: "恰好合拍\n从此有了一个你\n余生欢喜都归你\n(囍)"
-      },
-      rightImage: {
-        src: "https://www.hunlihu.com/userphoto/194774_eac264ceda67f424e97e37675.jpg",
-        alt: "婚礼筹备"
-      }
-    },
-    {
-      text: "亲朋好友的祝福，让我们感受到了爱的力量。有你们的见证，我们的婚礼将更加完美。",
-      leftImage: {
-        src: "https://www.hunlihu.com/userphoto/194774_0040142949b7b091d0021ba90.jpg",
-        alt: "亲友祝福"
-      },
-      rightText: {
-        title: "My heart is with you",
-        subtitle: "从前到以后\n周周复年年"
-      }
-    },
-    {
-      text: "即将步入婚姻殿堂的我们，对未来充满了期待。我们相信，有爱的地方就是家，有你的地方就是天堂。",
-      leftText: {
-        title: "love and freedom",
-        subtitle: "you and gentleness"
-      },
-      rightImage: {
-        src: "https://www.hunlihu.com/userphoto/194774_0d58c4489bae873bfd44cdeeb.jpg",
-        alt: "未来期待"
-      }
-    },
-    {
-      text: "兜兜圈圈遇到你，至此世间无限美好。感谢命运让我们相遇，感谢爱情让我们相守。",
-      leftImage: {
-        src: "https://www.hunlihu.com/userphoto/194774_51ecd4d58bee05fe0a4e8be69.jpg",
-        alt: "美好时光"
-      },
-      rightText: {
-        title: "My heart is with you",
-        subtitle: "/"
-      }
-    }
-  ]
+  const ImageWrapper = ({ src, alt, className = "" }: any) => (
+    <div
+      className={`relative group cursor-pointer overflow-hidden ${className}`}
+      onClick={() => onImageClick(src)}
+    >
+      <Image
+        src={src}
+        alt={alt}
+        width={800}
+        height={600}
+        className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+      />
+      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300" />
+    </div>
+  )
 
   return (
-    <section className="py-12 bg-background">
-      <div className="text-center mb-12">
-        <h2 className="text-2xl font-wedding text-black mb-4">我们的爱情故事</h2>
-        <p className="text-sm text-gray-600">Our Love Story</p>
+    <section className="py-8 bg-background">
+      <div className="text-center mb-8">
+        <h2 className="text-lg font-wedding text-black mb-2">/ 11年后的我们 / </h2>
+        <p className="text-sm text-gray-600  font-english">Our Love Story</p>
       </div>
-      
-      <div className="px-6 space-y-16">
-        {content.map((item, index) => (
-          <div key={index} className="space-y-8">
-            {/* 文字部分 */}
-            <div className="text-center mb-8">
-              <p className="text-sm text-black leading-relaxed px-4 mb-6">
-                {item.text}
-              </p>
-            </div>
-            
-            {/* 左右布局区域 */}
-            <div className="flex flex-col lg:flex-row gap-8 items-center">
-              
-              {/* 左侧内容 */}
-              <div className="flex-1">
-                {item.leftImage ? (
-                  // 左侧图片
-                  <div className="relative group cursor-pointer overflow-hidden rounded-lg shadow-lg">
-                    <Image
-                      src={item.leftImage.src}
-                      alt={item.leftImage.alt}
-                      width={400}
-                      height={500}
-                      className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
-                      onClick={() => onImageClick(item.leftImage.src)}
-                    />
-                    <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-500 flex items-center justify-center">
-                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform scale-75 group-hover:scale-100">
-                        <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                ) : (
-                  // 左侧文字
-                  <div className="text-center lg:text-left space-y-4">
-                    <h3 className="text-lg font-wedding text-gray-800">
-                      {item.leftText.title}
-                    </h3>
-                    <p className="text-sm text-gray-600 whitespace-pre-line leading-relaxed">
-                      {item.leftText.subtitle}
-                    </p>
-                  </div>
-                )}
-              </div>
-              
-              {/* 右侧内容 */}
-              <div className="flex-1">
-                {item.rightImage ? (
-                  // 右侧图片
-                  <div className="relative group cursor-pointer overflow-hidden rounded-lg shadow-lg">
-                    <Image
-                      src={item.rightImage.src}
-                      alt={item.rightImage.alt}
-                      width={400}
-                      height={500}
-                      className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
-                      onClick={() => onImageClick(item.rightImage.src)}
-                    />
-                    <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-500 flex items-center justify-center">
-                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform scale-75 group-hover:scale-100">
-                        <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                ) : (
-                  // 右侧文字
-                  <div className="text-center lg:text-left space-y-4">
-                    <h3 className="text-lg font-wedding text-gray-800">
-                      {item.rightText.title}
-                    </h3>
-                    <p className="text-sm text-gray-600 whitespace-pre-line leading-relaxed">
-                      {item.rightText.subtitle}
-                    </p>
-                  </div>
-                )}
-              </div>
-            </div>
-            
-            {/* 分隔线（除了最后一个） */}
-            {index < content.length - 1 && (
-              <div className="flex justify-center pt-8">
-                <div className="w-24 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
-              </div>
-            )}
-          </div>
-        ))}
+      {/* 初遇 */}
+      <div className="space-y-6 ">
+        <div className='pt-4 pb-4  bg-black'>
+          <ImageWrapper
+            src="https://www.hunlihu.com/userphoto/194774_7676849d098edcdbd42b12815.jpg"
+            alt="初遇"
+            className="w-full"
+          />
+          <p className='text-white text-xs mt-2 font-english text-center'>As the clouds and mist dissipate, I love you and everyone knows it</p>
+        </div>
+
       </div>
-      
-      {/* 底部装饰性文字 */}
-      <div className="mt-16 text-center px-6">
-        <div className="inline-block border-t border-gray-200 pt-4">
-          <p className="text-xs text-gray-500 italic">
-            "love and freedom. you and gentleness"
+
+      <div className="max-w-6xl mx-auto px-4 space-y-12">
+
+        <div className="text-left mt-6 font-wedding">
+          <h3 className="text-lg text-center text-gray-800 mb-3"> 2014年的那次勇敢 </h3>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            第一次见到你时，我就知道我的生活将因你而改变。那一刻，时间仿佛静止，世界只剩下你。
           </p>
+        </div>
+        {/* 相识相知 */}
+        <div>
+          <ImageWrapper
+            src="https://www.hunlihu.com/userphoto/194774_c36784a8ca35639a657d1ce81.jpg"
+            alt="相识相知"
+            className="w-full mb-4"
+          />
+          <ImageWrapper
+            src="https://www.hunlihu.com/userphoto/194774_d5f5e4108a8185f3bfcef009c.jpg"
+            alt="甜蜜时光"
+            className="w-full"
+          />
+          <div className="text-right mt-4">
+            <h3 className="text-xl font-wedding text-gray-800 mb-3">甜蜜时光</h3>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              每一个平凡的日子，因为有你的陪伴而变得特别。一起看过的电影，走过的街道，吃过的餐厅，都成为了我们爱情故事中最珍贵的回忆。
+            </p>
+          </div>
+        </div>
+
+        {/* 求婚时刻 */}
+        <div className="flex flex-row gap-4 items-center">
+          <div className="w-3/4">
+            <ImageWrapper
+              src="https://www.hunlihu.com/userphoto/194774_e72274864b7adb6a6515d77cc.jpg"
+              alt=""
+              className="w-full"
+            />
+          </div>
+          <div className="w-1/4 text-center space-y-3">
+            <p className="text-gray-600 font-english text-sm md:text-xl writing-mode-vertical-rl transform" style={{ writingMode: 'vertical-rl', textOrientation: 'mixed' }}>
+              You make my heart smile
+            </p>
+          </div>
+        </div>
+
+        {/* 婚纱照 */}
+        <div className="flex flex-row-reverse gap-4 items-center mt-12">
+          <div className="w-1/2">
+            <ImageWrapper
+              src="https://www.hunlihu.com/userphoto/194774_0d58c4489bae873bfd44cdeeb.jpg"
+              alt="婚纱照"
+              className="w-full"
+            />
+          </div>
+          <div className="w-1/2 text-right space-y-2 font-wedding">
+            <div className="flex flex-row-reverse justify-start space-x-reverse space-x-4 md:space-x-6 text-xs">
+              <p className="text-gray-700" style={{ writingMode: 'vertical-rl', textOrientation: 'upright' }}>生活有很多味道，而最苦最甜都是你</p>
+            </div>
+          </div>
+        </div>
+        {/* 英文分界 */}
+        <div>
+          <svg className='w-full' xmlns="http://www.w3.org/2000/svg" width="691.157" height="13.969" viewBox="0 0 691.157 13.969" preserveAspectRatio="none">
+            <defs>
+            </defs>
+            <path id="_without_love_" data-name="{ without love }" d="M34.828,40.31c-0.615-.21-1.05-0.8-1.05-2.355V35.8c0-1.635-.99-1.995-1.68-1.995,0.69,0,1.68-.51,1.68-2.16V29.48c0-1.56.435-2.13,1.05-2.355l-0.015-.15a2.2,2.2,0,0,0-2.085,2.5v1.755c0,2.37-.6,2.31-1.185,2.49V33.89c0.585,0.165,1.185.09,1.185,2.31v1.755a2.2,2.2,0,0,0,2.085,2.5Zm7.71-12.869v2.64h0.2a2.468,2.468,0,0,1,2.76-2.445h0.885v8.91a1.017,1.017,0,0,1-1.08,1.26V38h3.66v-0.2a1.026,1.026,0,0,1-1.095-1.26v-8.91h0.885c0.21,0,2.715.03,2.775,2.445h0.2V27.44h-9.18Zm19.14,2.085c0-1.455.03-1.755,0.735-1.89v-0.2H59.757v0.2c0.42,0.135.435,0.435,0.435,1.89V32.81h-4.11V29.525c0-1.455.015-1.755,0.435-1.89v-0.2h-2.67v0.2c0.72,0.135.75,0.54,0.75,1.89V35.96c0,1.44.045,1.635-.75,1.845V38h2.67v-0.2c-0.42-.15-0.435-0.315-0.435-1.845V33.065h4.11V35.96c0,1.335-.03,1.695-0.435,1.845V38h2.655v-0.2c-0.78-.21-0.735-0.615-0.735-1.845V29.525ZM71.862,34.88c-0.315,3-2.97,2.925-4.3,2.925h-0.69v-5.04h0.975c0.375,0,1.995.015,2.07,1.515h0.195V31.055H69.912c-0.075,1.515-1.665,1.515-2.07,1.515H66.868V27.635h0.81c1.215,0,3.81.03,3.99,2.5h0.2v-2.7h-7.35v0.2c0.66,0,.81.48,0.81,1.41v7.2c0,1.02-.18,1.56-0.81,1.56V38h7.545V34.88H71.862Zm15.06,2.025c0.78-1.23.45-2.895-1.56-4.215l-2.475-1.635c-2.265-1.47-1.035-3.555.585-3.555,2.5,0,3.09,1.56,3.225,3.03h0.21V28.01a7.55,7.55,0,0,0-3.435-.705,3.249,3.249,0,0,0-2.82,1.17c-1.155,1.77.21,3.135,1.635,4.08l2.49,1.605c1.755,1.245,1.455,3.78-.825,3.78-2.55,0-3.225-1.695-3.39-3.525h-0.18V37.3a6.278,6.278,0,0,0,3.57.84C86.277,38.135,86.922,36.905,86.922,36.905Zm11.4-4.11c0,4.125-1.365,5.145-3.135,5.145s-3.15-1.02-3.15-5.145c0-4.11,1.365-5.295,3.15-5.295S98.322,28.685,98.322,32.8Zm1.74,0c0-2.97-1.575-5.49-4.875-5.49s-4.875,2.52-4.875,5.49,1.575,5.34,4.875,5.34S100.062,35.78,100.062,32.8Zm7.035,5.34a3.376,3.376,0,0,0,3.645-3.675V30.38c0-1.41-.045-2.745,1.92-2.745v-0.2h-3.9v0.2c1.755,0,1.785,1.335,1.785,2.745v4.08a2.691,2.691,0,0,1-2.715,3,2.631,2.631,0,0,1-2.729-2.925v-5.58c0-1.185.54-1.32,1.184-1.32v-0.2h-3.734v0.2c0.66,0,1.065.285,1.065,1.3V34.4A3.38,3.38,0,0,0,107.1,38.135Zm15.48-3.39c-0.255,3.06-2.8,3.075-4.41,3.06h-0.539V28.97c0-1.08.464-1.335,1.109-1.335v-0.2h-3.569v0.2c0.645,0,.945.345,0.945,1.26v7.32c0,1.02-.18,1.59-0.825,1.59V38h7.484V34.745h-0.2Zm8.566,5.715a2.2,2.2,0,0,0,2.085-2.5V36.2c0-2.22.6-2.145,1.184-2.31V33.725c-0.585-.18-1.184-0.12-1.184-2.49V29.48a2.2,2.2,0,0,0-2.085-2.5l-0.015.15c0.615,0.225,1.05.8,1.05,2.355v2.16c0,1.65.99,2.16,1.679,2.16-0.689,0-1.679.36-1.679,1.995v2.16c0,1.56-.435,2.145-1.05,2.355ZM309.7,40.779c-0.615-.21-1.05-0.8-1.05-2.355v-2.16c0-1.635-.99-1.995-1.68-1.995,0.69,0,1.68-.51,1.68-2.16V29.95c0-1.56.435-2.13,1.05-2.355l-0.015-.15a2.2,2.2,0,0,0-2.085,2.5V31.7c0,2.37-.6,2.31-1.185,2.49V34.36c0.585,0.165,1.185.09,1.185,2.31v1.755a2.2,2.2,0,0,0,2.085,2.5Zm16.47-5.415a3.2,3.2,0,0,1-3.24,3.045c-1.515,0-3.285-.615-3.285-5.22,0-4.53,1.725-5.22,3.285-5.22,1.215,0,2.82.57,3.24,3.045h0.2l0.18-2.325a5.351,5.351,0,0,0-3.615-.915c-3.105,0-5.205,2.04-5.205,5.415,0,3.345,2.1,5.415,5.205,5.415a5.7,5.7,0,0,0,3.615-.93l-0.18-2.31h-0.2Zm5.145-.285,1.815-4.98,1.965,4.98h-3.78Zm7.47,3.195c-0.42-.03-0.735-0.015-1.23-1.215,0,0-1.86-4.74-3.69-9.15H333.7l-2.5,6.825c-1.305,3.465-1.68,3.525-2.25,3.54v0.2h3.345v-0.2c-2.085.06-1.425-1.8-1.02-3h3.885l0.525,1.3c0.345,0.84.5,1.695-.315,1.695v0.2h3.42v-0.2Zm9.24-10.365v0.18c1.98,0,1.965,2.16,1.965,3.555v4.635l-6.48-8.37h-2.775v0.18c0.39,0.03.825-.06,1.785,1.14l0.615,0.795v4.695c0,1.35,0,3.555-2.175,3.555v0.2h4.335v-0.2c-1.965,0-1.965-2.235-1.965-3.555V30.25l6.375,8.22h0.48V31.645c0-1.395-.045-3.555,2.13-3.555V27.91h-4.29Zm13.605,0v0.18c1.98,0,1.965,2.16,1.965,3.555v4.635l-6.48-8.37h-2.775v0.18c0.39,0.03.825-.06,1.785,1.14l0.615,0.795v4.695c0,1.35,0,3.555-2.175,3.555v0.2H358.9v-0.2c-1.965,0-1.965-2.235-1.965-3.555V30.25l6.375,8.22h0.48V31.645c0-1.395-.045-3.555,2.13-3.555V27.91h-4.29Zm14.79,5.355c0,4.125-1.365,5.145-3.135,5.145s-3.15-1.02-3.15-5.145c0-4.11,1.365-5.295,3.15-5.295S376.417,29.155,376.417,33.265Zm1.74,0c0-2.97-1.575-5.49-4.875-5.49s-4.875,2.52-4.875,5.49c0,2.985,1.575,5.34,4.875,5.34S378.157,36.249,378.157,33.265Zm2.49-5.355v2.64h0.195A2.468,2.468,0,0,1,383.6,28.1h0.885v8.91a1.017,1.017,0,0,1-1.08,1.26v0.2h3.66v-0.2a1.026,1.026,0,0,1-1.1-1.26V28.1h0.885c0.21,0,2.715.03,2.775,2.445h0.195V27.91h-9.18Zm24.315,7.3c-0.255,3.06-2.805,3.075-4.41,3.06h-0.54V29.44c0-1.08.465-1.335,1.11-1.335v-0.2h-3.57v0.2c0.645,0,.945.345,0.945,1.26v7.32c0,1.02-.18,1.59-0.825,1.59v0.2h7.485V35.214h-0.195Zm3.36-7.3v0.2a0.954,0.954,0,0,1,1.05,1.185v7.575c0,1.02-.405,1.41-1.05,1.41v0.2h3.645v-0.2c-0.63,0-1.05-.39-1.05-1.41V29.29a0.959,0.959,0,0,1,1.05-1.185v-0.2h-3.645Zm12.945,0v0.2c2.16,0,1.275,2.16.81,3.555l-1.86,4.935-2.67-7.155a0.947,0.947,0,0,1,.9-1.335v-0.2h-4.035v0.2a1.322,1.322,0,0,1,1.425,1.095s1.785,4.86,3.63,9.27h0.21l2.58-6.78c1.365-3.585,1.74-3.585,2.73-3.585v-0.2h-3.72Zm13.395,7.44c-0.315,3-2.97,2.925-4.3,2.925h-0.69v-5.04h0.975c0.375,0,2,.015,2.07,1.515h0.195V31.525h-0.195c-0.075,1.515-1.665,1.515-2.07,1.515h-0.975V28.1h0.81c1.215,0,3.81.03,3.99,2.5h0.195v-2.7h-7.35v0.2c0.66,0,.81.48,0.81,1.41v7.2c0,1.02-.18,1.56-0.81,1.56v0.2h7.545v-3.12h-0.2Zm8.61,5.58a2.2,2.2,0,0,0,2.085-2.5V36.669c0-2.22.6-2.145,1.185-2.31V34.195c-0.585-.18-1.185-0.12-1.185-2.49V29.95a2.2,2.2,0,0,0-2.085-2.5l-0.015.15c0.615,0.225,1.05.8,1.05,2.355v2.16c0,1.65.99,2.16,1.68,2.16-0.69,0-1.68.36-1.68,1.995v2.16c0,1.56-.435,2.145-1.05,2.355Zm129.288-.155c-0.615-.21-1.05-0.795-1.05-2.355V36.26c0-1.635-.99-2-1.68-2,0.69,0,1.68-.51,1.68-2.16v-2.16c0-1.56.435-2.13,1.05-2.355l-0.015-.15a2.2,2.2,0,0,0-2.085,2.5V31.7c0,2.37-.6,2.31-1.185,2.49v0.165c0.585,0.165,1.185.09,1.185,2.31v1.755a2.2,2.2,0,0,0,2.085,2.5ZM591.76,27.9V28.1c2.1,0,1.275,2.1.84,3.54l-1.7,4.815-2.46-7.065a0.883,0.883,0,0,1,.9-1.29V27.9H585.31V28.1a1.391,1.391,0,0,1,1.44,1.17l0.78,2.235-1.65,4.9-2.58-7.02a0.9,0.9,0,0,1,.915-1.29V27.9h-4.05V28.1a1.391,1.391,0,0,1,1.44,1.17l3.54,9.195h0.225l2.265-6.675,2.49,6.675h0.21l2.46-6.78c1.229-3.225,1.679-3.585,2.774-3.585V27.9H591.76Zm6.345,0V28.1a0.954,0.954,0,0,1,1.05,1.185v7.575c0,1.02-.4,1.41-1.05,1.41v0.2h3.645v-0.2c-0.63,0-1.05-.39-1.05-1.41V29.285a0.959,0.959,0,0,1,1.05-1.185V27.9h-3.645Zm6.165,0v2.64h0.2a2.468,2.468,0,0,1,2.76-2.445h0.885v8.91a1.017,1.017,0,0,1-1.08,1.26v0.2h3.66v-0.2a1.026,1.026,0,0,1-1.1-1.26V28.1h0.885c0.21,0,2.715.03,2.775,2.445h0.2V27.9h-9.18Zm19.14,2.085c0-1.455.03-1.755,0.735-1.89V27.9H621.49V28.1c0.42,0.135.435,0.435,0.435,1.89v3.285h-4.11V29.99c0-1.455.015-1.755,0.435-1.89V27.9h-2.67V28.1c0.72,0.135.75,0.54,0.75,1.89v6.435c0,1.44.045,1.635-.75,1.845v0.2h2.67v-0.2c-0.42-.15-0.435-0.315-0.435-1.845V33.53h4.11v2.895c0,1.335-.03,1.695-0.435,1.845v0.2h2.655v-0.2c-0.78-.21-0.735-0.615-0.735-1.845V29.99Zm11,3.27c0,4.125-1.365,5.145-3.135,5.145s-3.15-1.02-3.15-5.145c0-4.11,1.365-5.295,3.15-5.295S634.405,29.15,634.405,33.26Zm1.74,0c0-2.97-1.575-5.49-4.875-5.49s-4.875,2.52-4.875,5.49c0,2.985,1.575,5.34,4.875,5.34S636.145,36.245,636.145,33.26Zm7.035,5.34a3.376,3.376,0,0,0,3.645-3.675v-4.08c0-1.41-.045-2.745,1.92-2.745V27.9h-3.9V28.1c1.755,0,1.785,1.335,1.785,2.745v4.08a2.691,2.691,0,0,1-2.715,3A2.632,2.632,0,0,1,641.185,35V29.42c0-1.185.54-1.32,1.185-1.32V27.9h-3.735V28.1c0.66,0,1.065.285,1.065,1.3v5.46A3.38,3.38,0,0,0,643.18,38.6Zm7.7-10.695v2.64h0.2a2.468,2.468,0,0,1,2.76-2.445h0.885v8.91a1.017,1.017,0,0,1-1.08,1.26v0.2h3.66v-0.2a1.026,1.026,0,0,1-1.095-1.26V28.1h0.885c0.21,0,2.715.03,2.775,2.445h0.195V27.9h-9.18Zm24.315,7.3c-0.255,3.06-2.805,3.075-4.41,3.06h-0.54V29.435c0-1.08.465-1.335,1.11-1.335V27.9h-3.57V28.1c0.645,0,.945.345,0.945,1.26v7.32c0,1.02-.18,1.59-0.825,1.59v0.2h7.485V35.21H675.19Zm11.2-1.95c0,4.125-1.365,5.145-3.135,5.145s-3.15-1.02-3.15-5.145c0-4.11,1.365-5.295,3.15-5.295S686.4,29.15,686.4,33.26Zm1.74,0c0-2.97-1.575-5.49-4.875-5.49s-4.875,2.52-4.875,5.49c0,2.985,1.575,5.34,4.875,5.34S688.135,36.245,688.135,33.26Zm9.27-5.355V28.1c2.16,0,1.275,2.16.81,3.555l-1.86,4.935-2.67-7.155a0.947,0.947,0,0,1,.9-1.335V27.9H690.55V28.1a1.322,1.322,0,0,1,1.425,1.1s1.785,4.86,3.63,9.27h0.21l2.58-6.78c1.365-3.585,1.74-3.585,2.73-3.585V27.9h-3.72Zm13.395,7.44c-0.315,3-2.97,2.925-4.3,2.925h-0.69V33.23h0.975c0.375,0,2,.015,2.07,1.515h0.195V31.52H708.85c-0.075,1.515-1.665,1.515-2.07,1.515h-0.975V28.1h0.81c1.215,0,3.81.03,3.99,2.5H710.8V27.9h-7.35V28.1c0.66,0,.81.48,0.81,1.41v7.2c0,1.02-.18,1.56-0.81,1.56v0.2H711v-3.12h-0.2Zm8.61,5.58a2.2,2.2,0,0,0,2.085-2.5V36.664c0-2.22.6-2.145,1.185-2.31V34.19c-0.585-.18-1.185-0.12-1.185-2.49V29.945a2.2,2.2,0,0,0-2.085-2.5l-0.015.15c0.615,0.225,1.05.795,1.05,2.355V32.1c0,1.65.99,2.16,1.68,2.16-0.69,0-1.68.36-1.68,2v2.16c0,1.56-.435,2.145-1.05,2.355Z" transform="translate(-31.531 -26.969)" fill="rgba(67,67,67,1)"></path>
+          </svg>
+        </div>
+
+        {/* 未来憧憬 */}
+        <div className="my-4">
+          <ImageWrapper
+            src="https://www.hunlihu.com/userphoto/194774_e72274864b7adb6a6515d77cc.jpg"
+            alt="未来憧憬"
+            className="w-full"
+          />
+          <div className="text-center mt-12">
+            <h3 className="text-xl font-wedding text-gray-800 mb-3">未来憧憬</h3>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              我们的故事才刚刚开始，未来还有无数个春夏秋冬等着我们一起度过。我期待着和你一起变老的样子，期待着我们的小家充满欢声笑语。
+            </p>
+          </div>
+        </div>
+
+        {/* 永恒的爱 */}
+        <div className="space-y-6">
+          <ImageWrapper
+            src="https://www.hunlihu.com/userphoto/194774_eac264ceda67f424e97e37675.jpg"
+            alt="永恒的爱"
+            className="w-full"
+          />
+          <div className="text-center">
+            <h3 className="text-xl font-wedding text-gray-800 mb-3">永恒的爱</h3>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              时光荏苒，岁月如歌。感谢命运让我们相遇，感谢爱情让我们相守。这一路走来，有你真好。
+            </p>
+          </div>
+        </div>
+
+        {/* 执子之手 */}
+        <div className="space-y-6">
+          <ImageWrapper
+            src="https://www.hunlihu.com/userphoto/194774_51ecd4d58bee05fe0a4e8be69.jpg"
+            alt="执子之手"
+            className="w-full"
+          />
+          <div className="text-center">
+            <h3 className="text-lg font-wedding text-gray-800 mb-4">执子之手 与子偕老</h3>
+            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+              这是我们的故事，也是我们的承诺。愿我们的爱情如美酒般，越陈越香。
+            </p>
+          </div>
+        </div>
+
+        {/* 底部装饰 */}
+        <div className="text-center pt-8 pb-4">
+          <div className="inline-block">
+            <p className="text-pink-400 text-3xl mb-2">♥</p>
+            <p className="text-xs text-gray-500 italic">
+              "Love is not finding someone to live with,<br />
+              it's finding someone you can't live without."
+            </p>
+          </div>
         </div>
       </div>
     </section>
   )
-} 
+}

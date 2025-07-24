@@ -32,27 +32,27 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="w-[375px] min-h-screen mx-auto relative bg-background">
+      <main className="min-h-screen mx-auto relative bg-background">
         {/* 首页英雄区域 */}
         <HeroSection />
-        
+
         {/* 邀请卡片 */}
         <InvitationCard />
-        
+
         {/* 照片画廊 */}
         <PhotoGallery onImageClick={handleImageClick} />
-        
-            {/* 新人签名和邀请文字 */}
-            <SignatureSection />
+
+        {/* 新人签名和邀请文字 */}
+        <SignatureSection />
         {/* 婚礼详情和倒计时 */}
         <WeddingDetails />
-        
-        
+
+
         {/* 底部操作按钮 */}
         <BottomActions />
-        
+
         {/* 图片模态框 */}
-        <ImageModal 
+        <ImageModal
           isOpen={isModalOpen}
           imageSrc={modalImage}
           onClose={handleCloseModal}

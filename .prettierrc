@@ -1,0 +1,9 @@
+{
+  "singleQuote": true,
+  "semi": true,
+  "endOfLine": "auto",
+  "arrowParens": "avoid",
+  "jsxBracketSameLine": false,
+  "proseWrap": "never",
+  "printWidth": 120
+}

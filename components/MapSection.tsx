@@ -50,24 +50,24 @@ export default function MapSection() {
         <h2 className="text-2xl font-wedding text-black mb-4">交通指南</h2>
         <p className="text-sm text-gray-600">Wedding Venue</p>
       </div> */}
-      
+
       <div className="px-6">
         {/* 地图容器 */}
         <div className="bg-white rounded-lg shadow-sm overflow-hidden mb-8">
-          <div 
+          <div
             className="relative h-64 cursor-pointer"
             onClick={handleMapClick}
           >
             {/* 背景图片 - 透明度60% */}
             <div className="absolute inset-0 z-0">
               <Image
-                src="https://www.hunlihu.com/userphoto/194774_e72274864b7adb6a6515d77cc.jpg"
+                src="https://www.hunlihu.com/userphoto/194774_0d58c4489bae873bfd44cdeeb.jpg"
                 alt=""
                 fill
                 className="object-cover opacity-80"
               />
             </div>
-            
+
             {/* 使用真实地图图片 */}
             <div className="relative z-10 h-full">
               <Image
@@ -77,12 +77,12 @@ export default function MapSection() {
                 className="object-cover"
               />
             </div>
-            
+
             <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center hover:bg-opacity-20 transition-all duration-300 z-20">
               <div className="text-center text-white">
-                <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-4 backdrop-blur-sm">
+                <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-4">
                   <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                   </svg>
                 </div>
                 <p className="text-lg  mb-2">读田村文化广场</p>
@@ -94,12 +94,12 @@ export default function MapSection() {
             </div>
           </div>
         </div>
-        
-        
+
+
         {/* 装饰性文字 */}
         <div className="mt-8 text-center">
           <p className="text-sm text-black leading-relaxed">
-            "希望春风能对你温柔点<br/>
+            "希望春风能对你温柔点<br />
             拂去烦躁，满目皆是柔情"
           </p>
         </div>

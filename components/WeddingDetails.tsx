@@ -11,17 +11,17 @@ export default function WeddingDetails() {
 
   useEffect(() => {
     const weddingDate = new Date('2025-10-02T11:58:00')
-    
+
     const timer = setInterval(() => {
       const now = new Date()
       const difference = weddingDate.getTime() - now.getTime()
-      
+
       if (difference > 0) {
         const days = Math.floor(difference / (1000 * 60 * 60 * 24))
         const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
         const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60))
         const seconds = Math.floor((difference % (1000 * 60)) / 1000)
-        
+
         setTimeLeft({ days, hours, minutes, seconds })
       }
     }, 1000)
@@ -31,8 +31,8 @@ export default function WeddingDetails() {
 
   return (
     <section className="py-4 bg-background">
-          {/* 婚礼信息 */}
-          <div className="px-6 text-center">
+      {/* 婚礼信息 */}
+      <div className="px-6 text-center">
         <div className="mb-8">
           <div className="space-y-4">
             <div className="p-6 shadow-sm">
@@ -42,29 +42,29 @@ export default function WeddingDetails() {
               <div className="text-sm text-gray-600 mt-1">农历八月十一（星期四）</div>
               <div className="text-sm text-gray-600 mt-1">中午11:30 恭候入席</div>
             </div>
-                        
+
             <div className="pt-6">
               <div className="text-sm text-gray-600 mb-2"> / 婚礼地点 / </div>
               <div className="text-sm text-black">茂名市化州官桥镇</div>
               <div className="text-sm text-gray-600 mt-1">读田村文化广场</div>
             </div>
-              <MapSection />
+            <MapSection />
           </div>
         </div>
-        
+
         {/* 装饰性文字 */}
         <div className="mt-8">
           <p className="text-sm text-black leading-relaxed">
-            "最大的幸福就是能把自己的手放在你的手心<br/>
+            "最大的幸福就是能把自己的手放在你的手心<br />
             与你一起走完这浪漫的一生"
           </p>
         </div>
       </div>
       <div className="text-center mt-12">
         <h2 className="text-lg font-wedding text-black mb-4">婚礼倒计时</h2>
-        <p className="text-sm text-gray-600">Countdown to Our Special Day</p>
+        <p className="text-sm text-gray-600 font-english">Countdown to Our Special Day</p>
       </div>
-      
+
       {/* 倒计时组件 */}
       <div className="flex justify-center mt-10">
         <div className="flex space-x-4">
@@ -94,7 +94,7 @@ export default function WeddingDetails() {
           </div>
         </div>
       </div>
-      
+
     </section>
   )
 } 
