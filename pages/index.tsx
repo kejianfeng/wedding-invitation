@@ -13,8 +13,8 @@ export default function Home() {
   const [modalImage, setModalImage] = useState<string>('')
   const [isModalOpen, setIsModalOpen] = useState(false)
 
-  const handleImageClick = (imageSrc: string) => {
-    setModalImage(imageSrc)
+  const handleImageClick = (imageSrc: string | string[]) => {
+    setModalImage(imageSrc as string)
     setIsModalOpen(true)
   }
 
