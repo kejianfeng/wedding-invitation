@@ -47,11 +47,18 @@ let js = {
      * 19829fa9c7be4ef59ece6dd0d525c230
      */
     'https://itapis.cvte.com/cfile/c1e09cc9-a0ba-4487-a2a0-eae7d99e74b3/v2/download/19829fa9c7be4ef59ece6dd0d525c230.jpg',
+    'https://itapis.cvte.com/cfile/c1e09cc9-a0ba-4487-a2a0-eae7d99e74b3/v2/download/f5790ca9d87f42c7a65169bf5e429528.jpg',
   ],
   oldSchool: [
     /**
      * c7331dfa368e4431be7d864987f10636
      */
     'https://itapis.cvte.com/cfile/c1e09cc9-a0ba-4487-a2a0-eae7d99e74b3/v2/download/c7331dfa368e4431be7d864987f10636.jpg',
+  ],
+  // 点缀素材
+  decoration: [
+    'https://h.hunlihu.com/sysma/1_6bf8447219f4a08321f99ad6f.png',
+    'https://h.hunlihu.com/sysma/1_545dd49378ad43946b82726a3.png',
+    'https://h.hunlihu.com/sysma/1_a15de4444b77369b1f66d8fc0.png',
   ],
 };

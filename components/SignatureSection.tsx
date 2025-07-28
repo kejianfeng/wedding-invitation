@@ -33,7 +33,7 @@ export default function SignatureSection() {
           <div className="text-center">
             <div className="relative w-32 h-32 mb-4">
               <Image
-                src="https://www.hunlihu.com/userphoto/194774_5f660475495b91827d638e84b.jpg"
+                src="https://itapis.cvte.com/cfile/c1e09cc9-a0ba-4487-a2a0-eae7d99e74b3/v2/download/b8fad78fbb714e258cdd0c0ea2fd58a8.jpg"
                 alt="新郎照片"
                 fill
                 className="p-1 object-cover rounded-full border border-gray-300"
@@ -45,7 +45,7 @@ export default function SignatureSection() {
           <div className="text-center">
             <div className="relative w-32 h-32 mb-4">
               <Image
-                src="https://www.hunlihu.com/userphoto/194774_5d6f54766a3cc0086e0a3151a.jpg"
+                src="https://itapis.cvte.com/cfile/c1e09cc9-a0ba-4487-a2a0-eae7d99e74b3/v2/download/57825f6ddebb4f24af57c3cb7b987269.jpg"
                 alt="新娘照片"
                 fill
                 className="p-1 object-cover rounded-full border border-gray-300"

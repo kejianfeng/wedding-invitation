@@ -7,20 +7,20 @@ export default function BottomActions() {
   return (
     <section className="py-8 bg-background">
       <div className="px-6">
-        <Image
+        {/* <Image
           src="https://itapis.cvte.com/cfile/c1e09cc9-a0ba-4487-a2a0-eae7d99e74b3/v2/download/492d7f1a1a7a44138da05139c629a8c3.jpg"
           alt="婚纱照"
           width={800}
           height={600}
           className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
-        />
-        <Image
+        /> */}
+        {/* <Image
           src="https://itapis.cvte.com/cfile/c1e09cc9-a0ba-4487-a2a0-eae7d99e74b3/v2/download/6d185c1c00ea42ecb96a46f015c99f2a.jpg"
           alt="婚纱照"
           width={800}
           height={600}
           className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
-        />
+        /> */}
 
 
         {/* 底部装饰 */}

@@ -23,16 +23,16 @@ export default function PhotoGallery({ onImageClick }: PhotoGalleryProps) {
   )
 
   return (
-    <section className="py-8 bg-background">
+    <section className="py-8 bg-background text-xs">
       <div className="text-center mb-8">
-        <h2 className="text-lg font-wedding text-black mb-2">/ 11年后的我们 / </h2>
+        <h2 className="text-lg font-wedding text-black mb-2">11年，挚爱如初</h2>
         <p className="text-sm text-gray-600  font-english">Our Love Story</p>
       </div>
       {/* 初遇 */}
       <div className="space-y-6 ">
         <div className='pt-4 pb-4  bg-black'>
           <ImageWrapper
-            src="https://www.hunlihu.com/userphoto/194774_7676849d098edcdbd42b12815.jpg"
+            src="https://itapis.cvte.com/cfile/c1e09cc9-a0ba-4487-a2a0-eae7d99e74b3/v2/download/fa7f37e6b83f4e3ca0a66d42453c9096.jpg"
             alt="初遇"
             className="w-full"
           />
@@ -41,13 +41,16 @@ export default function PhotoGallery({ onImageClick }: PhotoGalleryProps) {
 
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 space-y-12">
+      <div className="max-w-6xl mx-auto px-4 space-y-6">
 
         <div className="text-left mt-6 font-wedding">
-          <h3 className="text-lg text-center text-gray-800 mb-3"> 2014年的那次勇敢 </h3>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            第一次见到你时，我就知道我的生活将因你而改变。那一刻，时间仿佛静止，世界只剩下你。
-          </p>
+          {/* <h3 className="text-lg text-center text-gray-800 mb-3"> 2014年的那次勇敢 </h3> */}
+          <div className="text-xs  leading-8">
+            <p> 第一次见到你时</p>
+            <p> 我就知道我的生活将因你而改变</p>
+            <p> 那一刻，时间仿佛静止</p>
+            <p> 世界只剩下你</p>
+          </div>
         </div>
         {/* 海边 */}
         <div>
@@ -67,11 +70,12 @@ export default function PhotoGallery({ onImageClick }: PhotoGalleryProps) {
             className="w-full mb-4"
           />
 
-          <div className="text-right mt-8">
-            <h3 className="text-lg font-wedding text-gray-800 mb-3">有你，路就不感觉远</h3>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              每一个平凡的日子，因为有你的陪伴而变得特别。一起看过的电影，走过的街道，吃过的餐厅，都成为了我们爱情故事中最珍贵的回忆。
-            </p>
+          <div className="text-right mt-8 font-wedding leading-8">
+            <p> 人生再长，也长不过四季 </p>
+            <p> 余生袅袅，我只想牵着你的手 </p>
+            <p> 奔往世间所有美好的存在里 </p>
+            <p> 漫漫亦灿灿，年年又岁岁 </p>
+
           </div>
         </div>
         {/* 草地 */}
@@ -92,27 +96,21 @@ export default function PhotoGallery({ onImageClick }: PhotoGalleryProps) {
 
         {/* 草地 */}
         <div className="flex flex-row-reverse gap-4 items-center mt-12">
-          <div className="w-1/2">
+          <div className="w-2/3">
             <ImageWrapper
               src="https://itapis.cvte.com/cfile/c1e09cc9-a0ba-4487-a2a0-eae7d99e74b3/v2/download/b12f1e45996c41979bc9f44b65f923bb.jpg"
               alt="婚纱照"
               className="w-full"
             />
           </div>
-          <div className="w-1/2 text-right space-y-2 font-wedding">
-            <div className="flex flex-row-reverse justify-start space-x-reverse space-x-4 md:space-x-6 text-xs">
-              <p className="text-gray-700" style={{ writingMode: 'vertical-rl', textOrientation: 'upright' }}>生活有很多味道，而最苦最甜都是你</p>
-            </div>
+          <div className='w-1/2 relative left-4 z-50' >
+            <ImageWrapper
+              src="https://h.hunlihu.com/sysma/1_a15de4444b77369b1f66d8fc0.png"
+              alt=""
+              className="w-full"
+            />
           </div>
-        </div>
 
-        {/* 草地 */}
-        <div className="my-4">
-          <ImageWrapper
-            src="https://itapis.cvte.com/cfile/c1e09cc9-a0ba-4487-a2a0-eae7d99e74b3/v2/download/fa7f37e6b83f4e3ca0a66d42453c9096.jpg"
-            alt=""
-            className="w-full"
-          />
         </div>
         {/* 英文分界 */}
         <div>
@@ -144,48 +142,35 @@ export default function PhotoGallery({ onImageClick }: PhotoGalleryProps) {
         </div>
 
         {/* 红色 */}
-        <div>
-          <div
-          >
-            {/* <ImageWrapper
-              src="https://itapis.cvte.com/cfile/c1e09cc9-a0ba-4487-a2a0-eae7d99e74b3/v2/download/c99d32ffaad44133864a1c10995331a9.jpg"
-              alt="婚纱照"
-              className="w-full mb-4"
-            /> */}
-            {/* <div style={{
-              maskImage: "url(https://www.hunlihu.com/sysmask/1_2e50744f9b14c4b201daea422.png)",
-              maskSize: "100% 100%"
-            }}>
-
-              <ImageWrapper
-                src="https://itapis.cvte.com/cfile/c1e09cc9-a0ba-4487-a2a0-eae7d99e74b3/v2/download/068a03899c034d55a3c4b622fe8f95c6.jpg"
-                alt=""
-                className="w-full mb-4"
-              />
-            </div> */}
-            <div className='flex justify-center'>
-              <span onClick={() => onImageClick(['https://itapis.cvte.com/cfile/c1e09cc9-a0ba-4487-a2a0-eae7d99e74b3/v2/download/c99d32ffaad44133864a1c10995331a9.jpg', 'https://itapis.cvte.com/cfile/c1e09cc9-a0ba-4487-a2a0-eae7d99e74b3/v2/download/068a03899c034d55a3c4b622fe8f95c6.jpg'])}>
-                戳这里💗戳这里
-              </span>
-            </div>
-
-          </div>
-
+        <div className='flex justify-center'>
+          <span onClick={() => onImageClick(['https://itapis.cvte.com/cfile/c1e09cc9-a0ba-4487-a2a0-eae7d99e74b3/v2/download/c99d32ffaad44133864a1c10995331a9.jpg', 'https://itapis.cvte.com/cfile/c1e09cc9-a0ba-4487-a2a0-eae7d99e74b3/v2/download/068a03899c034d55a3c4b622fe8f95c6.jpg'])}>
+            戳这里💗戳这里
+          </span>
         </div>
 
-
-
-
         {/* 永恒的爱 */}
-        <div className="space-y-6">
-          <div className="text-center mt-12">
-            <h3 className="text-lg font-wedding text-gray-800 mb-3">春夏秋冬，以及你</h3>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              我们的故事才刚刚开始，未来还有无数个春夏秋冬等着我们一起度过。我期待着和你一起变老的样子，期待着我们的小家充满欢声笑语。
-            </p>
+        <div className="space-y-4">
+
+          {/* <h3 className="relative text-lg font-wedding text-gray-800 text-center">
+            春夏秋冬，以及你
+          </h3> */}
+          <div className="text-xs text-center leading-8 font-wedding ">
+            <div className='flex justify-center'>
+              <ImageWrapper
+                src="https://h.hunlihu.com/sysma/1_6bf8447219f4a08321f99ad6f.png"
+                alt=""
+                className="w-1/4 "
+              />
+            </div>
+            {/* <p>/</p> */}
+            <p> 婚礼是我们俩做的一个勇敢的决定</p>
+            <p>我们希望它温馨质朴</p>
+            <p>不拘泥于形式，不匆忙，慢慢来</p>
+            <p>邀请此刻正在看请柬的你 </p>
           </div>
           <ImageWrapper
-            src="https://www.hunlihu.com/userphoto/194774_eac264ceda67f424e97e37675.jpg"
+            // src="https://www.hunlihu.com/userphoto/194774_eac264ceda67f424e97e37675.jpg"
+            src="https://itapis.cvte.com/cfile/c1e09cc9-a0ba-4487-a2a0-eae7d99e74b3/v2/download/f5790ca9d87f42c7a65169bf5e429528.jpg"
             alt="永恒的爱"
             className="w-full"
           />

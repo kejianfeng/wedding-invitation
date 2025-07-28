@@ -51,34 +51,23 @@ export default function MapSection() {
         <p className="text-sm text-gray-600">Wedding Venue</p>
       </div> */}
 
-      <div className="px-6">
+      <div className="">
         {/* 地图容器 */}
         <div className="bg-white rounded-lg shadow-sm overflow-hidden mb-8">
           <div
-            className="relative h-64 cursor-pointer"
+            className="relative h-80 cursor-pointer"
             onClick={handleMapClick}
           >
             {/* 背景图片 - 透明度60% */}
             <div className="absolute inset-0 z-0">
               <Image
-                src="https://www.hunlihu.com/userphoto/194774_0d58c4489bae873bfd44cdeeb.jpg"
+                src="https://itapis.cvte.com/cfile/c1e09cc9-a0ba-4487-a2a0-eae7d99e74b3/v2/download/6d185c1c00ea42ecb96a46f015c99f2a.jpg"
                 alt=""
                 fill
                 className="object-cover opacity-80"
               />
             </div>
-
-            {/* 使用真实地图图片 */}
-            <div className="relative z-10 h-full">
-              <Image
-                src="https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/pin-s+ff0000(110.9253,21.6633)/110.9253,21.6633,12,0/600x300@2x?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw"
-                fill
-                alt=""
-                className="object-cover"
-              />
-            </div>
-
-            <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center hover:bg-opacity-20 transition-all duration-300 z-20">
+            <div className="absolute inset-0 bg-black bg-opacity-10 flex  items-end justify-center hover:bg-opacity-20 transition-all duration-300 z-20">
               <div className="text-center text-white">
                 <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-4">
                   <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
