@@ -1,8 +1,10 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import Image from 'next/image'
+import { InvitationCardProps } from '@/pages'
 
-export default function HeroSection() {
+export default function HeroSection({ invitationName, currentGuest }: InvitationCardProps) {
   const [isPlaying, setIsPlaying] = useState(false)
+  const [showWelcomeModal, setShowWelcomeModal] = useState(true)
   const audioRef = useRef<HTMLAudioElement>(null)
 
   const toggleMusic = () => {
@@ -16,6 +18,15 @@ export default function HeroSection() {
     }
   }
 
+  const handleWelcomeConfirm = () => {
+    setShowWelcomeModal(false)
+    // 开始播放音乐
+    if (audioRef.current) {
+      audioRef.current.play()
+      setIsPlaying(true)
+    }
+  }
+
   return (
     <div className="relative overflow-hidden">
       {/* 音频元素 */}
@@ -25,6 +36,26 @@ export default function HeroSection() {
         loop
         onEnded={() => setIsPlaying(false)}
       />
+
+      {/* 欢迎弹窗 */}
+      {showWelcomeModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 animate-fadeIn backdrop-blur-sm">
+          <div className="flex flex-col items-center justify-center">
+            <Image src="https://itapis.cvte.com/cfile/c1e09cc9-a0ba-4487-a2a0-eae7d99e74b3/v2/download/e289181ce8cd41c9a03fefbe5465f8ce.jpg" alt="欢迎" width={300} height={600} />
+            <p className="text-sm text-white  my-4 leading-relaxed px-2 font-wedding">
+              <span> {currentGuest?.nickName || invitationName || '大人'}，</span>
+              <span >请帖来啦！</span>
+            </p>
+            <button
+              onClick={handleWelcomeConfirm}
+              className="w-full bg-white text-gray-800 py-2 px-8 rounded-full text-lg shadow-lg border border-gray-200"
+            >
+              <span className="relative z-10">一起见证！</span>
+            </button>
+          </div>
+
+        </div>
+      )}
 
       <Image
         src="https://itapis.cvte.com/cfile/c1e09cc9-a0ba-4487-a2a0-eae7d99e74b3/v2/download/ba7aae3b62d64efb9cc55a41f1f24ef7.jpg"

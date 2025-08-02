@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import MapSection from './MapSection'
+import { InvitationCardProps } from '../pages'
 
-export default function WeddingDetails() {
+export default function WeddingDetails({ currentGuest }: InvitationCardProps) {
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -55,8 +56,9 @@ export default function WeddingDetails() {
         {/* 装饰性文字 */}
         <div className="mt-8">
           <p className="text-sm text-black leading-relaxed">
-            "最大的幸福就是能把自己的手放在你的手心<br />
-            与你一起走完这浪漫的一生"
+            {/* "最大的幸福就是能把自己的手放在你的手心<br />
+            与你一起走完这浪漫的一生" */}
+            {currentGuest?.extraText}
           </p>
         </div>
       </div>

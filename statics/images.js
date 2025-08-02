@@ -10,7 +10,7 @@ let js = {
   seaSide: [
     /**
      * 12ed27b1485841278292c90b38f4bbed
-     * ba7aae3b62d64efb9cc55a41f1f24ef7
+     * 88e2618e33e9439a8a59d8af3e6b5dd7
      * 6d185c1c00ea42ecb96a46f015c99f2a
      * becd0b7aa73b4be8befe72bd4f171648
      * cd9a97c476624aafa0c7546f9a9373fb
@@ -18,12 +18,13 @@ let js = {
      * 492d7f1a1a7a44138da05139c629a8c3
      */
     'https://itapis.cvte.com/cfile/c1e09cc9-a0ba-4487-a2a0-eae7d99e74b3/v2/download/12ed27b1485841278292c90b38f4bbed.jpg',
-    'https://itapis.cvte.com/cfile/c1e09cc9-a0ba-4487-a2a0-eae7d99e74b3/v2/download/ba7aae3b62d64efb9cc55a41f1f24ef7.jpg',
+    'https://itapis.cvte.com/cfile/c1e09cc9-a0ba-4487-a2a0-eae7d99e74b3/v2/download/88e2618e33e9439a8a59d8af3e6b5dd7.jpg',
     'https://itapis.cvte.com/cfile/c1e09cc9-a0ba-4487-a2a0-eae7d99e74b3/v2/download/6d185c1c00ea42ecb96a46f015c99f2a.jpg',
     'https://itapis.cvte.com/cfile/c1e09cc9-a0ba-4487-a2a0-eae7d99e74b3/v2/download/becd0b7aa73b4be8befe72bd4f171648.jpg',
     'https://itapis.cvte.com/cfile/c1e09cc9-a0ba-4487-a2a0-eae7d99e74b3/v2/download/cd9a97c476624aafa0c7546f9a9373fb.jpg',
     'https://itapis.cvte.com/cfile/c1e09cc9-a0ba-4487-a2a0-eae7d99e74b3/v2/download/83d91d24fdda4a4dbfcb814314bb8694.jpg',
     'https://itapis.cvte.com/cfile/c1e09cc9-a0ba-4487-a2a0-eae7d99e74b3/v2/download/492d7f1a1a7a44138da05139c629a8c3.jpg',
+    'https://itapis.cvte.com/cfile/c1e09cc9-a0ba-4487-a2a0-eae7d99e74b3/v2/download/b12f1e45996c41979bc9f44b65f923bb.jpg',
   ],
   grass: [
     /**
@@ -41,6 +42,8 @@ let js = {
     'https://itapis.cvte.com/cfile/c1e09cc9-a0ba-4487-a2a0-eae7d99e74b3/v2/download/b12f1e45996c41979bc9f44b65f923bb.jpg',
     'https://itapis.cvte.com/cfile/c1e09cc9-a0ba-4487-a2a0-eae7d99e74b3/v2/download/695797d7125c4b26b1e2e42417c739f4.jpg',
     'https://itapis.cvte.com/cfile/c1e09cc9-a0ba-4487-a2a0-eae7d99e74b3/v2/download/5ac3132478884ef291fd464c7618567e.jpg',
+    // 51057b00027c468f81fa7d1d9d6db927
+    'https://itapis.cvte.com/cfile/c1e09cc9-a0ba-4487-a2a0-eae7d99e74b3/v2/download/51057b00027c468f81fa7d1d9d6db927.jpg',
   ],
   white: [
     /**

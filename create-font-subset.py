@@ -8,6 +8,7 @@ import json
 import os
 import subprocess
 import sys
+import re
 from pathlib import Path
 
 def check_fonttools():
@@ -28,6 +29,47 @@ def install_fonttools():
     except subprocess.CalledProcessError:
         print("fonttools安装失败，请手动安装：pip install fonttools")
         return False
+
+def extract_text_from_guest_file():
+    """从guest.ts文件中提取文字内容"""
+    guest_file = 'utils/guest.ts'
+    
+    if not os.path.exists(guest_file):
+        print(f"⚠️  警告：找不到guest.ts文件: {guest_file}")
+        return ""
+    
+    try:
+        with open(guest_file, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # 提取所有中文字符
+        chinese_chars = re.findall(r'[\u4e00-\u9fff]+', content)
+        extracted_text = ''.join(chinese_chars)
+        
+        print(f"📝 从guest.ts中提取到 {len(extracted_text)} 个中文字符")
+        print(f"提取的文字: {extracted_text}")
+        
+        return extracted_text
+        
+    except Exception as e:
+        print(f"❌ 读取guest.ts文件失败: {e}")
+        return ""
+
+def merge_characters(base_chars, additional_chars):
+    """合并字符，去重"""
+    if not additional_chars:
+        return base_chars
+    
+    # 合并并去重
+    merged = base_chars + additional_chars
+    unique_chars = ''.join(sorted(set(merged)))
+    
+    print(f"📊 字符统计:")
+    print(f"   基础字符: {len(base_chars)} 个")
+    print(f"   新增字符: {len(additional_chars)} 个")
+    print(f"   合并后: {len(unique_chars)} 个")
+    
+    return unique_chars
 
 def create_font_subset(source_file, output_file, characters):
     """创建字体子集"""
@@ -86,6 +128,10 @@ def main():
         if not install_fonttools():
             return
     
+    # 提取guest.ts中的文字
+    print("\n📖 提取guest.ts中的文字...")
+    guest_text = extract_text_from_guest_file()
+    
     # 读取配置
     try:
         with open('font-subset-config.json', 'r', encoding='utf-8') as f:
@@ -97,13 +143,16 @@ def main():
         print("❌ 配置文件格式错误")
         return
     
-    # 处理中文字体
+    # 处理中文字体 - 合并guest.ts中的文字
     print("\n📝 处理中文字体...")
     chinese_config = config['chinese_font']
+    base_chinese_chars = chinese_config['characters']
+    merged_chinese_chars = merge_characters(base_chinese_chars, guest_text)
+    
     success1 = create_font_subset(
         chinese_config['source_file'],
         chinese_config['output_file'],
-        chinese_config['characters']
+        merged_chinese_chars
     )
     
     # 处理英文字体
