@@ -4,18 +4,18 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
-/* 本地婚礼字体定义 */
+/* 本地婚礼字体定义 - 子集化版本 */
 @font-face {
   font-family: 'WeddingFont';
-  src: url('./fonts/siyuansong.ttf') format('truetype');
+  src: url('./fonts/siyuansong-subset.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
-/* 英文字体 */
+/* 英文字体 - 子集化版本 */
 @font-face {
   font-family: 'Poiretone';
-  src: url('./fonts/Poiretone.ttf') format('truetype');
+  src: url('./fonts/Poiretone-subset.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
