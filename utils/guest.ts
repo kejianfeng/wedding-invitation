@@ -207,4 +207,18 @@ export const guest = [
     helloText: '亲爱的',
     extraText: '期待我们的国源童鞋能够出席哇！',
   },
+  // 读田
+  {
+    name: '柯盛雄',
+    nickName: '盛雄',
+    helloText: '亲爱的',
+    extraText: '期待盛雄哥哥能够出席哇！',
+  },
+  // 柯文斌
+  {
+    name: '柯文斌',
+    nickName: '斌叔',
+    helloText: '亲爱的',
+    extraText: '作为本场婚礼的主持人，希望斌叔充分展示读田新青年的风采哇！',
+  },
 ];
