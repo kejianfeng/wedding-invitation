@@ -69,7 +69,7 @@ export default function Home() {
         <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
       </Head>
 
-      <main className="min-h-screen mx-auto relative bg-background">
+      <main className="main-container">
         {/* 首页英雄区域 */}
         <HeroSection {...commonProps} />
 
