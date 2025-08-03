@@ -175,9 +175,9 @@ export const guest = [
   // 颜耀锋
   {
     name: '颜耀锋',
-    nickName: '颜锋',
+    nickName: '耀锋',
     helloText: '亲爱的',
-    extraText: '期待我们的颜锋童鞋能够出席哇！',
+    extraText: '期待我们的耀锋童鞋能够出席哇！',
   },
   // 欧阳宇锋
   {
