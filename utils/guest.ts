@@ -50,29 +50,154 @@ export const guest = [
     name: '张锦涛',
     nickName: '涛涛',
     helloText: '亲爱的',
-    extraText: '期待我的好同学涛涛童鞋能够出席哇！',
+    extraText: '期待我们的涛涛童鞋能够出席哇！',
   },
+
+  // 五个臭皮匠
+  {
+    name: '陈静义',
+    nickName: '蒸鱼童鞋',
+    helloText: '亲爱的',
+    extraText: '期待我们的臭皮匠成员蒸鱼童鞋能够出席哇！',
+  },
+  {
+    name: '张庆武',
+    nickName: '庆武',
+    helloText: '亲爱的',
+    extraText: '期待我们的臭皮匠成员庆武童鞋能够出席哇！',
+  },
+  // 陈伟冰
+  {
+    name: '陈伟冰',
+    nickName: '侬fe童鞋',
+    helloText: '亲爱的',
+    extraText: '期待我们的臭皮匠成员伟冰童鞋能够出席哇！',
+  },
+  // 张晓丹
+  {
+    name: '张晓丹',
+    nickName: '鸟蛋童鞋',
+    helloText: '亲爱的',
+    extraText: '期待我们的臭皮匠成员鸟蛋童鞋能够出席哇！',
+  },
+  // 陈晓丹
 
   //官桥童鞋
   // 化州童鞋
   {
-    name: '超新',
-    helloText: '童鞋',
+    name: '庞超新',
+    nickName: '超新',
+    helloText: '亲爱的',
+    extraText: '期待我们的超新童鞋能够出席哇！',
   },
   {
-    name: '浩颖',
-    helloText: '童鞋',
+    name: '房浩颖',
+    nickName: '浩颖',
+    helloText: '亲爱的',
+    extraText: '期待我们的浩颖童鞋能够出席哇！',
   },
   {
-    name: '莫会力（色长）',
-    helloText: '色长',
+    name: '莫会力',
+    nickName: '色长',
+    helloText: '亲爱的',
+    extraText: '期待我们的色长童鞋能够出席哇！',
+  },
+  // 官桥中学童鞋
+  {
+    name: '黄建军',
+    nickName: '军叔',
+    helloText: '亲爱的',
+    extraText: '期待我们的军叔童鞋能够出席哇！',
   },
   {
-    name: '小明',
-    helloText: '童鞋',
+    name: '何剑明',
+    nickName: '瓜咸童鞋',
+    helloText: '亲爱的',
+    extraText: '期待我们的瓜咸童鞋能够出席哇！',
+  },
+  // 杨永茂
+  {
+    name: '杨永茂',
+    nickName: '大茂童鞋',
+    helloText: '亲爱的',
+    extraText: '期待我们的大茂童鞋能够出席哇！',
+  },
+  // 马来福
+  {
+    name: '马来福',
+    nickName: '阿福',
+    helloText: '亲爱的',
+    extraText: '期待我们的阿福童鞋能够出席哇！',
+  },
+  // 黄建国
+  {
+    name: '黄建国',
+    nickName: '东山童鞋',
+    helloText: '亲爱的',
+    extraText: '期待我们的东山童鞋能够出席哇！',
+  },
+  // 张世亮
+  {
+    name: '张世亮',
+    nickName: '亮亮',
+    helloText: '亲爱的',
+    extraText: '期待我们的亮亮童鞋能够出席哇！',
   },
   {
-    name: '小红',
-    helloText: '童鞋',
+    name: '李春婵',
+    nickName: '婵婵',
+    helloText: '亲爱的',
+    extraText: '期待我们的婵婵童鞋能够出席哇！',
+  },
+
+  // 陈春鸿
+  {
+    name: '陈春鸿',
+    nickName: '春鸿童鞋',
+    helloText: '亲爱的',
+    extraText: '期待我们的春鸿童鞋能够出席哇！',
+  },
+
+  // 高二七人组
+  {
+    name: '李玫',
+    nickName: '玫玫童鞋',
+    helloText: '亲爱的',
+    extraText: '期待我们的玫玫童鞋能够出席哇！',
+  },
+  // 罗斯敏
+  {
+    name: '罗斯敏',
+    nickName: '罗斯童鞋',
+    helloText: '亲爱的',
+    extraText: '期待我们的罗斯敏童鞋能够出席哇！',
+  },
+  // 颜耀锋
+  {
+    name: '颜耀锋',
+    nickName: '颜锋',
+    helloText: '亲爱的',
+    extraText: '期待我们的颜锋童鞋能够出席哇！',
+  },
+  // 欧阳宇锋
+  {
+    name: '欧阳宇锋',
+    nickName: '嘟嘟童鞋',
+    helloText: '亲爱的',
+    extraText: '期待我们的嘟嘟童鞋能够出席哇！',
+  },
+  // 张富翔
+  {
+    name: '杨富翔',
+    nickName: '富翔',
+    helloText: '亲爱的',
+    extraText: '期待我们的富翔童鞋能够出席哇！',
+  },
+  // 杨泽勇
+  {
+    name: '杨泽勇',
+    nickName: '泽勇童鞋',
+    helloText: '亲爱的',
+    extraText: '期待我们的杨勇童鞋能够出席哇！',
   },
 ];
