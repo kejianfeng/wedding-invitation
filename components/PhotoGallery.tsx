@@ -199,7 +199,7 @@ export default function PhotoGallery({ onImageClick }: PhotoGalleryProps) {
             </div>
             <div className='flex justify-center gap-4'>
               <LazyImage
-                src="https://itapis.cvte.com/cfile/c1e09cc9-a0ba-4487-a2a0-eae7d99e74b3/v2/download/072cf9f5aefe4f84903c7656c2ddd472.jpg"
+                src="https://itapis.cvte.com/cfile/c1e09cc9-a0ba-4487-a2a0-eae7d99e74b3/v2/download/4502f790fd754baab1cb898cc418ba67.jpg"
                 alt="草地照片1"
                 className="w-full mb-4"
                 onClick={() => onImageClick("https://itapis.cvte.com/cfile/c1e09cc9-a0ba-4487-a2a0-eae7d99e74b3/v2/download/072cf9f5aefe4f84903c7656c2ddd472.jpg")}
@@ -217,7 +217,7 @@ export default function PhotoGallery({ onImageClick }: PhotoGalleryProps) {
 
             </div>
             <LazyImage
-              src="https://itapis.cvte.com/cfile/c1e09cc9-a0ba-4487-a2a0-eae7d99e74b3/v2/download/695797d7125c4b26b1e2e42417c739f4.jpg"
+              src="https://itapis.cvte.com/cfile/c1e09cc9-a0ba-4487-a2a0-eae7d99e74b3/v2/download/3ef44a5d8de5408da1ef0de4e9c41118.jpg"
               alt="婚纱照1"
               className="w-full mb-4"
               onClick={() => onImageClick("https://itapis.cvte.com/cfile/c1e09cc9-a0ba-4487-a2a0-eae7d99e74b3/v2/download/695797d7125c4b26b1e2e42417c739f4.jpg")}

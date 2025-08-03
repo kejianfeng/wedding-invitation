@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import MapSection from './MapSection'
 import { InvitationCardProps } from '../pages'
+import Image from 'next/image'
 
 export default function WeddingDetails({ currentGuest }: InvitationCardProps) {
   const [timeLeft, setTimeLeft] = useState({
@@ -54,10 +55,9 @@ export default function WeddingDetails({ currentGuest }: InvitationCardProps) {
         </div>
 
         {/* 装饰性文字 */}
-        <div className="mt-8">
-          <p className="text-sm text-black leading-relaxed">
-            {/* "最大的幸福就是能把自己的手放在你的手心<br />
-            与你一起走完这浪漫的一生" */}
+        <div className="mt-8 text-center">
+          <Image src="https://www.hunlihu.com/sysma/5ba14c9f43a14dfea195cf20b9938b31.png" alt="婚纱照" width={100} height={100} className="mx-auto" />
+          <p className="text-sm text-black leading-relaxed px-10 mt-4 font-wedding">
             {currentGuest?.extraText}
           </p>
         </div>
