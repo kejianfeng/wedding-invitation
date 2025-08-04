@@ -221,4 +221,16 @@ export const guest = [
     helloText: '亲爱的',
     extraText: '作为本场婚礼的主持人，希望斌叔充分展示读田新青年的风采哇！',
   },
+  {
+    name: '龚雪',
+    nickName: '阿雪',
+    helloText: '亲爱的',
+    extraText: '虽然阿雪远在重庆，但还是要阿雪看看，为了友谊！',
+  },
+  {
+    name: '人力小伙伴们',
+    nickName: '人力小伙伴们',
+    helloText: '亲爱的',
+    extraText: '期待我们的人力小伙伴们能够出席哇！',
+  },
 ];
