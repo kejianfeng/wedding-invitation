@@ -28,11 +28,6 @@ export default function MapSection() {
         // 动态导入 AMapLoader，避免 SSR 问题
         const AMapLoader = (await import('@amap/amap-jsapi-loader')).default
 
-        // 设置安全密钥配置
-        window._AMapSecurityConfig = {
-          securityJsCode: "8311a6e4413399f3a67726e29251f7dc", // 使用你的安全密钥
-        }
-
         // 使用 AMapLoader 加载地图
         const AMap = await AMapLoader.load({
           key: "2ce7774365913f8bceeb89bfa6ca85a0", // 申请好的Web端开发者Key
