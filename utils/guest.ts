@@ -252,8 +252,8 @@ export const guest = [
     extraText: '期待我们的露露童鞋能够出席哇！',
   },
   {
-    name: '文文与科举',
-    nickName: '陈文文与陈科举',
+    name: '陈文文与陈科举',
+    nickName: '文文与科科',
     helloText: '亲爱的',
     extraText: '期待我们的文文与科科童鞋能够出席哇！',
   },
