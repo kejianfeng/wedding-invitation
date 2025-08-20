@@ -270,4 +270,25 @@ export const guest = [
     helloText: '亲爱的',
     extraText: '期待我们的泳泳童鞋能够出席哇！',
   },
+  // 黄丹虹
+  {
+    name: '黄丹虹',
+    nickName: '丹虹',
+    helloText: '亲爱的',
+    extraText: '期待我们的丹虹童鞋能够出席哇！',
+  },
+  // 黄海莹
+  {
+    name: '黄海莹',
+    nickName: '海莹',
+    helloText: '亲爱的',
+    extraText: '期待我们的海莹童鞋能够出席哇！',
+  },
+  // 李小慧
+  {
+    name: '李小慧',
+    nickName: '小慧',
+    helloText: '亲爱的',
+    extraText: '期待我们的小慧童鞋能够出席哇！',
+  },
 ];
